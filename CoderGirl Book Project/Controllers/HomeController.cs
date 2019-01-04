@@ -15,16 +15,21 @@ namespace CoderGirl_Book_Project.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Categories()
         {
-            ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Search()
         {
-            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Library()
+        {
+            ViewData["Message"] = "The books that you have read.";
 
             return View();
         }
