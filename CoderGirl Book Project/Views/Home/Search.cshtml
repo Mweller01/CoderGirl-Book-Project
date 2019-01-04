@@ -2,3 +2,76 @@
     ViewData["Title"] = "Search";
 }
 <h2>Find a book!</h2>
+<br />
+<div>
+    <form action="/search" name="quick_search">
+        <div style="margin:auto">
+
+            <label for="quick_search">Quick Search</label> <br />
+            <input type="text" name="quick_search" />
+            <input type="button" name="search" value="Search" />
+        </div>
+    </form>
+</div>
+<div>
+    <h3>Advanced Search</h3>
+</div>
+<div class="container">
+    <form action="/search" name="advanced_search">
+        <div class="row">
+            <div class="col-xs-3">
+                <label for="title">Title</label> <br />
+                <input type="text" name="title" />
+            </div>
+            <div class="col-xs">
+                <label for="author">Author</label> <br />
+                <input type="text" name="author" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-3">
+                <label for="category">Category</label> <br />
+                <select name="category">
+                    <option value="">Choose a category</option>
+                    <option value="high_fant">High Fantasy</option>
+                    <option value="urban_fant">Urban Fantasy</option>
+                    <option value="historical_fant">Historical Fantasy</option>
+                    <option value="scifi">Science Fiction</option>
+                    <option value="superheroes">Superheroes</option>
+                    <option value="steampunk">Steampunk</option>
+                </select>
+            </div>
+            <div class="col-xs">
+                <label for="rating">Rating</label> <br />
+                <select name="rating">
+                    <option value="">Choose a rating</option>
+                    <option value="kids">Kids</option>
+                    <option value="ya">Young Adult</option>
+                    <option value="adult">Adult</option>
+                    <option value="explicit">Explicit</option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <!--Do I want to do some sort of bag to grab the tags currently in the system and turn that into a dropdown?-->
+        <label for="tags">Choose up to four tags</label> <br />
+        <div class="row">
+            <div class="col-xs-3">
+                <input type="text" name="tag1" />
+            </div>
+            <div class="col-xs-3">
+                <input type="text" name="tag2" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-3">
+                <input type="text" name="tag3" />
+            </div>
+            <div class="col-xs-3">
+                <input type="text" name="tag4" />
+            </div>
+        </div>
+    </form>
+</div>
