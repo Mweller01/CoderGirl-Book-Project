@@ -34,6 +34,13 @@ namespace CoderGirl_Book_Project.Controllers
             return View();
         }
 
+        [Route("Home/Categories/HighFantasy")]
+        public IActionResult HighFantasy()
+        {
+
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
