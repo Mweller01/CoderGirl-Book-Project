@@ -34,8 +34,7 @@ namespace CoderGirl_Book_Project.Controllers
             return View();
         }
 
-        [Route("Home/Categories/HighFantasy")]
-        public IActionResult HighFantasy()
+        public IActionResult NewBook()
         {
 
             return View();
