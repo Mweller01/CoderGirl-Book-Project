@@ -17,11 +17,11 @@
             </div>
             <div class="col-xs-3">
                 <label for="title">Title</label> <br />
-                <input type="text" name="title" />
+                <input type="text" class="form-control" name="title" />
             </div>
             <div class="col-xs-3">
                 <label for="author">Author</label> <br />
-                <input type="text" name="author" />
+                <input type="text" class="form-control" name="author" />
             </div>
         </div>
         <br />
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-xs-3">
                 <label for="category">Category</label> <br />
-                <select name="category">
+                <select name="category" class="form-control">
                     <option value="">Choose a category</option>
                     <option value="high_fant">High Fantasy</option>
                     <option value="urban_fant">Urban Fantasy</option>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-xs-3">
                 <label for="rating">Rating</label> <br />
-                <select name="rating">
+                <select name="rating" class="form-control">
                     <option value="">Choose a rating</option>
                     <option value="kids">Kids</option>
                     <option value="ya">Young Adult</option>
@@ -52,29 +52,37 @@
         </div>
         <br />
         <br />
+        <div class="row">
+            <div class="col">
+                    <label for="category">Description</label> <br />
+                    <textarea class="form-control" name="description" rows="5"></textarea>
+            </div>
+        </div>
+        <br />
+        <br />
         <label for="tags">Choose up to six tags</label> <br />
         <div class="row">
             <div class="col-xs-3">
-                <input type="text" name="tag1" />
+                <input type="text" name="tag1" class="form-control"/>
             </div>
             <div class="col-xs-3">
-                <input type="text" name="tag2" />
+                <input type="text" name="tag2" class="form-control"/>
             </div>
             <div class="col-xs-3">
-                <input type="text" name="tag3" />
+                <input type="text" name="tag3" class="form-control"/>
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-xs-3">
-                <input type="text" name="tag4" />
+                <input type="text" name="tag4" class="form-control"/>
             </div>
 
             <div class="col-xs-3">
-                <input type="text" name="tag5" />
+                <input type="text" name="tag5" class="form-control"/>
             </div>
             <div class="col-xs-3">
-                <input type="text" name="tag6" />
+                <input type="text" name="tag6" class="form-control"/>
             </div>
         </div>
     </div>

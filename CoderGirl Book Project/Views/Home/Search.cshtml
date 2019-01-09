@@ -1,17 +1,24 @@
 ﻿@{
     ViewData["Title"] = "Search";
 }
+<!--I want the quick search to look the same as the regular search function, but I can't seem to get it to 
+    match while the search button is on the same line. If I use form control, it always drops to the next line
+    for some reason.-->
+
 <h2>Find a book!</h2>
 <br />
-<div>
-    <form action="/search" name="quick_search">
-        <div style="margin:auto">
-
-            <label for="quick_search">Quick Search</label> <br />
-            <input type="text" name="quick_search" />
-            <input type="button" name="search" value="Search" />
-        </div>
-    </form>
+<div class="container">
+    <div class="row">
+        <form action="/search" name="quick_search">
+            <div style="margin:auto">
+                <div class="col-xs-3">
+                        <label for="quick_search">Quick Search</label> <br />
+                        <input type="text" name="quick_search" />
+                        <input type="submit" name="search" value="Search" />
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 <div>
     <h3>Advanced Search</h3>
@@ -21,18 +28,18 @@
         <div class="row">
             <div class="col-xs-3">
                 <label for="title">Title</label> <br />
-                <input type="text" name="title" />
+                <input type="text" name="title" class="form-control"/>
             </div>
-            <div class="col-xs">
+            <div class="col-xs-3">
                 <label for="author">Author</label> <br />
-                <input type="text" name="author" />
+                <input type="text" name="author" class="form-control"/>
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-xs-3">
                 <label for="category">Category</label> <br />
-                <select name="category">
+                <select name="category" class="form-control">
                     <option value="">Choose a category</option>
                     <option value="high_fant">High Fantasy</option>
                     <option value="urban_fant">Urban Fantasy</option>
@@ -42,9 +49,9 @@
                     <option value="steampunk">Steampunk</option>
                 </select>
             </div>
-            <div class="col-xs">
+            <div class="col-xs-3">
                 <label for="rating">Rating</label> <br />
-                <select name="rating">
+                <select name="rating" class="form-control">
                     <option value="">Choose a rating</option>
                     <option value="kids">Kids</option>
                     <option value="ya">Young Adult</option>
@@ -58,19 +65,19 @@
         <label for="tags">Choose up to four tags</label> <br />
         <div class="row">
             <div class="col-xs-3">
-                <input type="text" name="tag1" />
+                <input type="text" name="tag1" class="form-control"/>
             </div>
             <div class="col-xs-3">
-                <input type="text" name="tag2" />
+                <input type="text" name="tag2" class="form-control"/>
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-xs-3">
-                <input type="text" name="tag3" />
+                <input type="text" name="tag3" class="form-control"/>
             </div>
             <div class="col-xs-3">
-                <input type="text" name="tag4" />
+                <input type="text" name="tag4" class="form-control"/>
             </div>
         </div>
         <br />
