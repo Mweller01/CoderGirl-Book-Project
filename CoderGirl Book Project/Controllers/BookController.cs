@@ -11,16 +11,9 @@ namespace CoderGirl_Book_Project.Controllers
 {
 
 
-        private BooksContext _context;
-
-        public BookController(BooksContext context)
-        {
-            _context = context;
-        }
-
         public IActionResult Index()
         {
-            return View(_context.Books.ToList());
+            return View();
         }
 
 

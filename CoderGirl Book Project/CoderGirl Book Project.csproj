@@ -5,6 +5,10 @@
     <UserSecretsId>aspnet-CoderGirl_Book_Project-35531D38-CEF1-4467-B441-907107A62B18</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models\BooksContext.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />

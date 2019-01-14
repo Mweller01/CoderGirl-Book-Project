@@ -40,7 +40,7 @@ namespace CoderGirl_Book_Project
             services.AddMvc();
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=Books;Trusted_Connection=True;";
-            services.AddDbContext<BooksContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
