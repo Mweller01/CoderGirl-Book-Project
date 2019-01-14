@@ -12,6 +12,7 @@ using CoderGirl_Book_Project.Data;
 using CoderGirl_Book_Project.Models;
 using CoderGirl_Book_Project.Services;
 
+
 namespace CoderGirl_Book_Project
 {
     public class Startup
@@ -37,6 +38,9 @@ namespace CoderGirl_Book_Project
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=BookDb;Trusted_Connection=True;";
+            services.AddDbContext<BooksContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
