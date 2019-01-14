@@ -1,5 +1,4 @@
-﻿using CoderGirl;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace CoderGirl_Book_Project.Models

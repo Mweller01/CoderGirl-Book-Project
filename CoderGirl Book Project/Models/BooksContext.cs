@@ -1,5 +1,4 @@
 ﻿using System;
-using CoderGirl;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
