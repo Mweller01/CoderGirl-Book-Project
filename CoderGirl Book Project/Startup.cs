@@ -39,7 +39,7 @@ namespace CoderGirl_Book_Project
 
             services.AddMvc();
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=BookDb;Trusted_Connection=True;";
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=Books;Trusted_Connection=True;";
             services.AddDbContext<BooksContext>(options => options.UseSqlServer(connection));
         }
 
