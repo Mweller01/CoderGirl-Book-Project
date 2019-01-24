@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using CoderGirl_Book_Project.Models;
+using CoderGirl_Book_Project.ViewModels;
 
 namespace CoderGirl_Book_Project.Data
 {
@@ -190,6 +191,9 @@ namespace CoderGirl_Book_Project.Data
                     .IsUnicode(false);
             });
         }
+
+
+        public DbSet<CoderGirl_Book_Project.ViewModels.NewBook> NewBook { get; set; }
 
         /* I think this is important but I don't know how.
         protected override void OnModelCreating(ModelBuilder builder)
