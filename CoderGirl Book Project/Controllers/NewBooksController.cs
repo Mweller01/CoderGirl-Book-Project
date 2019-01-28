@@ -54,12 +54,12 @@ namespace CoderGirl_Book_Project.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Cover,Description,Author,Category,Rating,Tag")] NewBook newBook)
+        public ActionResult Create([Bind(include: "Id,Title,Cover,Description,Author,Category,Rating,Tag")] NewBook newBook)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(newBook);
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View(newBook);
