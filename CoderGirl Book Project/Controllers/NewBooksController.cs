@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CoderGirl_Book_Project.Data;
 using CoderGirl_Book_Project.ViewModels;
+using CoderGirl_Book_Project.Models;
 
 namespace CoderGirl_Book_Project.Controllers
 {
@@ -58,6 +59,35 @@ namespace CoderGirl_Book_Project.Controllers
         {
             if (ModelState.IsValid)
             {
+                var NewBook = new Books
+                {
+                    Id = newBook.Id,
+                    Title = newBook.Title,
+                    Cover = newBook.Cover,
+                    Description = newBook.Description,
+                };
+
+                var Author = new Author
+                {
+                    Author1 = newBook.Author
+                };
+
+                var Category = new Categories
+                {
+                    Category = newBook.Category,
+                };
+
+                var Rating = new Ratings
+                {
+                    Rating = newBook.Rating
+                };
+
+                var Tag = new Tags
+                {
+                    Tag = newBook.Tag
+                };
+                    
+
                 _context.Add(newBook);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
