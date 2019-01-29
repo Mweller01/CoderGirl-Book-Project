@@ -40,14 +40,28 @@
             <div class="col-xs-3">
                 <div class="form-group">
                     <label asp-for="Category" class="control-label"></label>
-                    <input asp-for="Category" class="form-control" />
+                    <select asp-for="Category" class="form-control">
+                        <option value="">Choose a category</option>
+                        <option value="high_fant">High Fantasy</option>
+                        <option value="urban_fant">Urban Fantasy</option>
+                        <option value="historical_fant">Historical Fantasy</option>
+                        <option value="scifi">Science Fiction</option>
+                        <option value="superheroes">Superheroes</option>
+                        <option value="steampunk">Steampunk</option>
+                    </select>
                     <span asp-validation-for="Category" class="text-danger"></span>
                 </div>
             </div>
             <div class="col-xs-3">
                 <div class="form-group">
                     <label asp-for="Rating" class="control-label"></label>
-                    <input asp-for="Rating" class="form-control" />
+                    <select asp-for="Rating" class="form-control">
+                        <option value="">Choose a rating</option>
+                        <option value="kids">Kids</option>
+                        <option value="ya">Young Adult</option>
+                        <option value="adult">Adult</option>
+                        <option value="explicit">Explicit</option>
+                    </select>
                     <span asp-validation-for="Rating" class="text-danger"></span>
                 </div>
             </div>

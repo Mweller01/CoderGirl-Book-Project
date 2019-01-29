@@ -67,28 +67,35 @@ namespace CoderGirl_Book_Project.Controllers
                     Description = newBook.Description,
                 };
 
-                var Author = new Author
+                var author = new Author
                 {
                     Author1 = newBook.Author
                 };
 
-                var Category = new Categories
+                var category = new Categories
                 {
                     Category = newBook.Category,
                 };
 
-                var Rating = new Ratings
+                var rating = new Ratings
                 {
                     Rating = newBook.Rating
                 };
 
-                var Tag = new Tags
+                var tag = new Tags
                 {
                     Tag = newBook.Tag
                 };
                     
 
+                _context.Add(NewBook);
+                _context.Add(author);
+                _context.Add(category);
+                _context.Add(rating);
+                _context.Add(tag);
+
                 _context.Add(newBook);
+
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
