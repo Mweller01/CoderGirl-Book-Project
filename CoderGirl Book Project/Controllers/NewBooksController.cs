@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CoderGirl_Book_Project.Data;
+using CoderGirl_Book_Project.Models;
+using CoderGirl_Book_Project.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using CoderGirl_Book_Project.Data;
-using CoderGirl_Book_Project.ViewModels;
-using CoderGirl_Book_Project.Models;
 
 namespace CoderGirl_Book_Project.Controllers
 {
@@ -67,21 +64,14 @@ namespace CoderGirl_Book_Project.Controllers
                     Cover = newBook.Cover,
                     Description = newBook.Description,
                     
-                    Author = newBook.Author
 
                 };
 
-                if (_context.Author.Any(x => x.Author1 == newBook.Author))
+
+                var author = new Author
                 {
-                    Author = newBook.Author;
-                }
-                else
-                {
-                    var author = new Author
-                    {
-                        Author1 = newBook.Author
-                    };
-                }
+                    Author1 = newBook.Author
+                };
 
 
                 var category = new Categories
@@ -99,12 +89,6 @@ namespace CoderGirl_Book_Project.Controllers
                     Tag = newBook.Tag
                 };
                     
-
-                _context.Add(NewBook);
-                _context.Add(author);
-                _context.Add(category);
-                _context.Add(rating);
-                _context.Add(tag);
 
                 _context.Add(newBook);
 
