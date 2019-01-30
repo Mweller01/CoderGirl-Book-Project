@@ -26,6 +26,7 @@ namespace CoderGirl_Book_Project.Controllers
             return View(await _context.NewBook.ToListAsync());
         }
 
+
         // GET: NewBooks/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -65,12 +66,23 @@ namespace CoderGirl_Book_Project.Controllers
                     Title = newBook.Title,
                     Cover = newBook.Cover,
                     Description = newBook.Description,
+                    
+                    Author = newBook.Author
+
                 };
 
-                var author = new Author
+                if (_context.Author.Any(x => x.Author1 == newBook.Author))
                 {
-                    Author1 = newBook.Author
-                };
+                    Author = newBook.Author;
+                }
+                else
+                {
+                    var author = new Author
+                    {
+                        Author1 = newBook.Author
+                    };
+                }
+
 
                 var category = new Categories
                 {
